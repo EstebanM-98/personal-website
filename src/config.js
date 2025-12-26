@@ -1,26 +1,22 @@
 module.exports = {
-  email: 'lpapiernik24@gmail.com',
+  email: 'estebma@gmail.com',
 
   socialMedia: [
     {
       name: 'GitHub',
-      url: 'https://github.com/Luispapiernik',
+      url: 'https://github.com/EstebanM-98',
     },
     {
       name: 'Instagram',
-      url: 'https://www.instagram.com/luispapiernik/',
-    },
-    {
-      name: 'Twitter',
-      url: 'https://twitter.com/LPapiernik',
+      url: 'https://www.instagram.com/estebma/',
     },
     {
       name: 'Linkedin',
       url: 'https://www.linkedin.com/in/luispapiernik',
     },
     {
-      name: 'Hackerrank',
-      url: 'https://www.hackerrank.com/Luispapiernik',
+      name: 'GoogleScholar',
+      url: 'https://scholar.google.com/citations?user=8RRSaYIAAAAJ&hl=es',
     },
   ],
 

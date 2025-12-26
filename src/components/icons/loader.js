@@ -5,7 +5,10 @@ const IconLoader = () => (
     <title>Loader Logo</title>
     <g>
       <g id="B" transform="translate(11.000000, 5.000000)">
-        <path d="M30,60 L48,60 L48,56 L34,56 L34,30 L30,30 Z" fill="currentColor" />
+        <path
+          d="M30,60 L48,60 L48,56 L34,56 L34,48 L45,48 L45,44 L34,44 L34,34 L48,34 L48,30 L30,30 Z"
+          fill="currentColor"
+        />
       </g>
       <path
         stroke="currentColor"

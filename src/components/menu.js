@@ -267,7 +267,10 @@ const Menu = () => {
             )}
 
             <a href="/resume.pdf" className="resume-link">
-              Resume
+              Academic CV
+            </a>
+            <a href="/resume_industry.pdf" className="resume-link" style={{ marginTop: '10px' }}>
+              Industry CV
             </a>
           </nav>
         </StyledSidebar>

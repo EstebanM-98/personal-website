@@ -2,12 +2,12 @@ const config = require('./src/config');
 
 module.exports = {
   siteMetadata: {
-    title: 'Luis Papiernik',
+    title: 'Esteban Marulanda',
     description:
-      'Luis Papiernik is a physicist who specializes in solving problems with tech tools..',
+      'Esteban Marulanda is a physicist who specializes in solving problems with tech tools..',
     siteUrl: 'https://google.com', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
-    twitterUsername: '@LPapiernik',
+    twitterUsername: '',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -20,8 +20,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'LuisPapiernik',
-        short_name: 'LuisPapiernik',
+        name: 'Esteban Marulanda',
+        short_name: 'emarulanda',
         start_url: '/',
         background_color: config.colors.darkNavy,
         theme_color: config.colors.navy,

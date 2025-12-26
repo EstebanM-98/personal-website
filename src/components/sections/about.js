@@ -148,7 +148,7 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Luis Papiernik, and I enjoy solving problems using tech tools. My
+              Hello! My name is Esteban Marulanda, and I enjoy solving problems using tech tools. My
               interest in software development started when I, as a physics student, realized that
               the academic does not train us to make maintenable and scalable solutions, so I began
               to study in order to gain habilities in those fields.
