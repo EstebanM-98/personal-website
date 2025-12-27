@@ -5,7 +5,7 @@ module.exports = {
     title: 'Esteban Marulanda',
     description:
       'Esteban Marulanda is a physicist who specializes in solving problems with tech tools..',
-    siteUrl: 'https://google.com', // No trailing slash allowed!
+    siteUrl: 'https://estebanmarulanda.dev', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '',
   },
