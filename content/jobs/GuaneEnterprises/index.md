@@ -1,18 +1,12 @@
 ---
-category: 'industry'
-date: '2022-06-14'
-title: 'Backend developer'
+date: '2022-12-01'
+title: 'Backend Developer / Optimization Engineer'
 company: 'Guane Enterprises'
-location: 'Medellin, CA'
-range: 'February 2021 - March 2022'
+location: 'Remote'
+range: 'December 2022 - February 2023'
 url: 'https://guane.com.co/'
+category: 'industry'
 ---
 
-- Created microservices using FastAPI, Celery, Redis, RabbitMQ, and PostgreSQL, enhancing system scalability and performance.
-- Automated processes using Python and Selenium, significantly reducing manual effort and increasing efficiency.
-- Conducted web scraping activities using Python and Selenium, gathering valuable data for analysis and decision-making.
-- Extracted structured data from documents using regular expressions, improving data accessibility and usability.
-- Implemented business logic efficiently using Pyspark, optimizing data processing workflows and enhancing productivity.
-- Administered Google Cloud Computing resources including cloud functions, buckets, Dataproc clusters, and Dataproc jobs, ensuring smooth operation and resource utilization.
-- Refactored partner codebase, enhancing code quality, readability, and maintainability.
-- Presented as a speaker at the company's seminar, sharing expertise and insights on functional programming, and contributing to knowledge sharing and collaboration within the organization.
+- Developed a stochastic optimization model for demand management using Python and Pyomo, integrating advanced mathematical modeling techniques.
+- Implemented and validated optimization algorithms in Python with Pyomo, Pandas, and NumPy to enhance decision-making processes in demand management.

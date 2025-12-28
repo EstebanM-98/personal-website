@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { StaticImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
-// import { email } from '@config';
 
 const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -14,6 +14,17 @@ const StyledHeroSection = styled.section`
 
   @media (max-width: 480px) and (min-height: 700px) {
     padding-bottom: 10vh;
+  }
+
+  .inner {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-gap: 50px;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
   }
 
   h1 {
@@ -45,6 +56,74 @@ const StyledHeroSection = styled.section`
   }
 `;
 
+const StyledPic = styled.div`
+  position: relative;
+  max-width: 300px;
+  margin-left: auto;
+
+  @media (max-width: 768px) {
+    margin: 50px auto 0;
+    width: 70%;
+  }
+
+  .wrapper {
+    ${({ theme }) => theme.mixins.boxShadow};
+    display: block;
+    position: relative;
+    width: 100%;
+    border-radius: var(--border-radius);
+    background-color: var(--green);
+
+    &:hover,
+    &:focus {
+      outline: 0;
+
+      &:after {
+        top: 15px;
+        left: 15px;
+      }
+
+      .img {
+        filter: none;
+        mix-blend-mode: normal;
+      }
+    }
+
+    .img {
+      position: relative;
+      border-radius: var(--border-radius);
+      mix-blend-mode: multiply;
+      filter: grayscale(100%) contrast(1);
+      transition: var(--transition);
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: var(--border-radius);
+      transition: var(--transition);
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+      background-color: var(--navy);
+      mix-blend-mode: screen;
+    }
+
+    &:after {
+      border: 2px solid var(--green);
+      top: 20px;
+      left: 20px;
+      z-index: -1;
+    }
+  }
+`;
+
 const Hero = () => {
   const [isMounted, setIsMounted] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
@@ -58,45 +137,54 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const one = <h1>Hi, my name is</h1>;
+  const one = <h1>Hi, I’m</h1>;
   const two = <h2 className="big-heading">Esteban Marulanda.</h2>;
-  const three = <h3 className="big-heading">I solve problems for fun.</h3>;
-  const four = (
+  const three = (
     <>
       <p>
-        I am a physicist passionate about technology, with more than three years of experience as a
-        software developer and a solid formal background in math, physics, and programming. I'm
-        passionate about what I do, so I'm constantly improving my knowledge, and I consider myself
-        inquisitive, which is why I'm always learning new things.
+        a physicist who enjoys the intersection of complex problems, computation, and theory. I’m
+        passionate about research in physics and technology, and I love turning ideas into clear
+        models and practical tools that hold up in the real world.
       </p>
     </>
   );
-  const five = (
-    <a className="email-link" href="#about">
-      See more about me!
-    </a>
-  );
 
-  const items = [one, two, three, four, five];
+  const items = [one, two, three];
 
   return (
     <StyledHeroSection>
-      {prefersReducedMotion ? (
-        <>
-          {items.map((item, i) => (
-            <div key={i}>{item}</div>
-          ))}
-        </>
-      ) : (
-        <TransitionGroup component={null}>
-          {isMounted &&
-            items.map((item, i) => (
-              <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
-                <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
-              </CSSTransition>
-            ))}
-        </TransitionGroup>
-      )}
+      <div className="inner">
+        <div>
+          {prefersReducedMotion ? (
+            <>
+              {items.map((item, i) => (
+                <div key={i}>{item}</div>
+              ))}
+            </>
+          ) : (
+            <TransitionGroup component={null}>
+              {isMounted &&
+                items.map((item, i) => (
+                  <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
+                    <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
+                  </CSSTransition>
+                ))}
+            </TransitionGroup>
+          )}
+        </div>
+        <StyledPic>
+          <div className="wrapper">
+            <StaticImage
+              className="img"
+              src="../../images/hero-physics.jpg"
+              width={500}
+              quality={95}
+              formats={['AUTO', 'WEBP', 'AVIF']}
+              alt="Esteban Marulanda"
+            />
+          </div>
+        </StyledPic>
+      </div>
     </StyledHeroSection>
   );
 };
