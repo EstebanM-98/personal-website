@@ -92,8 +92,7 @@ const StyledPic = styled.div`
     .img {
       position: relative;
       border-radius: var(--border-radius);
-      mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(1);
+      mix-blend-mode: normal;
       transition: var(--transition);
     }
 
@@ -111,8 +110,8 @@ const StyledPic = styled.div`
     &:before {
       top: 0;
       left: 0;
-      background-color: var(--navy);
-      mix-blend-mode: screen;
+      background-color: transparent;
+      mix-blend-mode: normal;
     }
 
     &:after {

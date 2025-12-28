@@ -257,7 +257,7 @@ const StyledProject = styled.li`
     a {
       width: 100%;
       height: 100%;
-      background-color: var(--green);
+      background-color: transparent;
       border-radius: var(--border-radius);
       vertical-align: middle;
 
@@ -284,15 +284,16 @@ const StyledProject = styled.li`
         bottom: 0;
         z-index: 3;
         transition: var(--transition);
-        background-color: var(--navy);
-        mix-blend-mode: screen;
+        background-color: transparent;
+        mix-blend-mode: normal;
       }
     }
 
     .img {
       border-radius: var(--border-radius);
-      mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(1) brightness(90%);
+      border-radius: var(--border-radius);
+      mix-blend-mode: normal;
+      filter: none;
 
       @media (max-width: 768px) {
         object-fit: cover;
@@ -334,8 +335,12 @@ const Featured = ({ filter }) => {
   `);
 
   const featuredProjects = data.featured.edges.filter(({ node }) => {
-    if (!node) {return false;}
-    if (!filter) {return true;}
+    if (!node) {
+      return false;
+    }
+    if (!filter) {
+      return true;
+    }
     return node.frontmatter.category === filter;
   });
   const revealTitle = useRef(null);
