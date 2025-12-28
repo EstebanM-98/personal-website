@@ -1,4 +1,5 @@
 ---
+category: 'industry'
 date: '2022-06-10'
 title: 'Intern'
 company: 'Math Decision'

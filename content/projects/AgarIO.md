@@ -1,4 +1,5 @@
 ---
+category: 'industry'
 date: '2022-07-13'
 title: 'AgarIO'
 github: 'https://github.com/Luispapiernik/AgarIO'

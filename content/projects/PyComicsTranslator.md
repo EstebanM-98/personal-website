@@ -1,4 +1,5 @@
 ---
+category: 'industry'
 date: '2022-04-07'
 title: 'PyComicsTranslator'
 github: 'hhttps://github.com/Luispapiernik/Py-Comics-Translator'

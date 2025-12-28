@@ -1,4 +1,5 @@
 ---
+category: 'industry'
 date: '2019-03-12'
 title: 'Algebraic Objects'
 github: 'https://github.com/Luispapiernik/AlgebraicObject'

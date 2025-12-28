@@ -1,4 +1,5 @@
 ---
+category: 'industry'
 date: '2022-06-11'
 title: 'Freelancer'
 company: 'Upwork'

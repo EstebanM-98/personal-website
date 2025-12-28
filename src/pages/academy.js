@@ -1,25 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Layout, Hero, About, Contact, ParticlesBackground } from '@components';
+import { Layout, Jobs, Featured, Projects, ParticlesBackground } from '@components';
 
 const StyledMainContainer = styled.main`
   counter-reset: section;
 `;
 
-const IndexPage = ({ location }) => (
+const AcademyPage = ({ location }) => (
   <Layout location={location}>
     <StyledMainContainer className="fillHeight">
       <ParticlesBackground />
-      <Hero />
-      <About />
-      <Contact />
+      {/* <Hero /> Optionally include Hero or a specific Academy Hero */}
+      <Jobs filter="academy" />
+      <Featured filter="academy" />
+      <Projects filter="academy" />
     </StyledMainContainer>
   </Layout>
 );
 
-IndexPage.propTypes = {
+AcademyPage.propTypes = {
   location: PropTypes.object.isRequired,
 };
 
-export default IndexPage;
+export default AcademyPage;

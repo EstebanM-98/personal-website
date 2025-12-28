@@ -1,4 +1,5 @@
 ---
+category: 'industry'
 date: '2022-07-22'
 title: 'Lolcat Translator'
 github: 'https://github.com/Luispapiernik/Lolcat-Translator'

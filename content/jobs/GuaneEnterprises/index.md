@@ -1,4 +1,5 @@
 ---
+category: 'industry'
 date: '2022-06-14'
 title: 'Backend developer'
 company: 'Guane Enterprises'

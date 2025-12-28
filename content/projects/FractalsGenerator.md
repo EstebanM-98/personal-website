@@ -1,4 +1,5 @@
 ---
+category: 'industry'
 date: '2018-01-04'
 title: 'Fractals Generators'
 github: 'https://github.com/Luispapiernik/Fractales'

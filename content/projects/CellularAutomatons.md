@@ -1,4 +1,5 @@
 ---
+category: 'industry'
 date: '2022-08-01'
 title: 'Cellular Automatons'
 github: 'https://github.com/Luispapiernik/Cellular-automatons'

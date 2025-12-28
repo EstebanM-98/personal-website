@@ -1,4 +1,5 @@
 ---
+category: 'industry'
 date: '2022-07-28'
 title: 'Image2ASCII'
 github: 'https://github.com/Luispapiernik/image2ascii'

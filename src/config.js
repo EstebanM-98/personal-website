@@ -22,12 +22,12 @@ module.exports = {
 
   navLinks: [
     {
-      name: 'Experience',
-      url: '/#jobs',
+      name: 'Academy',
+      url: '/academy',
     },
     {
-      name: 'Work',
-      url: '/#projects',
+      name: 'Industry',
+      url: '/industry',
     },
     {
       name: 'About',
@@ -37,10 +37,6 @@ module.exports = {
       name: 'Contact',
       url: '/#contact',
     },
-    // {
-    //   name: 'Pensieve',
-    //   url: '/pensieve',
-    // },
   ],
 
   colors: {

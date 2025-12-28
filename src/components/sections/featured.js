@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import sr from '@utils/sr';
@@ -303,7 +304,7 @@ const StyledProject = styled.li`
   }
 `;
 
-const Featured = () => {
+const Featured = ({ filter }) => {
   const data = useStaticQuery(graphql`
     {
       featured: allMarkdownRemark(
@@ -323,6 +324,7 @@ const Featured = () => {
               github
               external
               cta
+              category
             }
             html
           }
@@ -331,7 +333,11 @@ const Featured = () => {
     }
   `);
 
-  const featuredProjects = data.featured.edges.filter(({ node }) => node);
+  const featuredProjects = data.featured.edges.filter(({ node }) => {
+    if (!node) {return false;}
+    if (!filter) {return true;}
+    return node.frontmatter.category === filter;
+  });
   const revealTitle = useRef(null);
   const revealProjects = useRef([]);
   const prefersReducedMotion = usePrefersReducedMotion();
@@ -412,6 +418,10 @@ const Featured = () => {
       </StyledProjectsGrid>
     </section>
   );
+};
+
+Featured.propTypes = {
+  filter: PropTypes.string,
 };
 
 export default Featured;

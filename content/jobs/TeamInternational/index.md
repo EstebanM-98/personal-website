@@ -1,4 +1,5 @@
 ---
+category: 'industry'
 date: '2024-04-30'
 title: 'Python Software Engineer'
 company: 'Team International'

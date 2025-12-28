@@ -1,4 +1,5 @@
 ---
+category: 'industry'
 date: '2'
 title: 'PyComicsTranslator'
 cover: './berserk.jpg'

@@ -1,4 +1,5 @@
 ---
+category: 'industry'
 date: '3'
 title: 'Fractals Generator'
 cover: './example_1.jpg'

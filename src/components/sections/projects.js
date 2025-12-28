@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { srConfig } from '@config';
@@ -165,7 +166,7 @@ const StyledProject = styled.li`
   }
 `;
 
-const Projects = () => {
+const Projects = ({ filter }) => {
   const data = useStaticQuery(graphql`
     query {
       projects: allMarkdownRemark(
@@ -182,6 +183,7 @@ const Projects = () => {
               tech
               github
               external
+              category
             }
             html
           }
@@ -207,7 +209,11 @@ const Projects = () => {
   }, []);
 
   const GRID_LIMIT = 6;
-  const projects = data.projects.edges.filter(({ node }) => node);
+  const projects = data.projects.edges.filter(({ node }) => {
+    if (!node) {return false;}
+    if (!filter) {return true;}
+    return node.frontmatter.category === filter;
+  });
   const firstSix = projects.slice(0, GRID_LIMIT);
   const projectsToShow = showMore ? projects : firstSix;
 
@@ -307,6 +313,10 @@ const Projects = () => {
       </button>
     </StyledProjectsSection>
   );
+};
+
+Projects.propTypes = {
+  filter: PropTypes.string,
 };
 
 export default Projects;
