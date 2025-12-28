@@ -190,7 +190,9 @@ const Jobs = ({ filter }) => {
   `);
 
   const jobsData = data.jobs.edges.filter(({ node }) => {
-    if (!filter) {return true;}
+    if (!filter) {
+      return true;
+    }
     return node.frontmatter.category === filter;
   });
 
@@ -249,7 +251,9 @@ const Jobs = ({ filter }) => {
 
   return (
     <StyledJobsSection id="jobs" ref={revealContainer}>
-      <h2 className="numbered-heading">Where I’ve Worked</h2>
+      <h2 className="numbered-heading">
+        {filter === 'academy' ? 'Where I’ve Studied' : 'Where I’ve Worked'}
+      </h2>
 
       <div className="inner">
         <StyledTabList role="tablist" aria-label="Job tabs" onKeyDown={e => onKeyDown(e)}>

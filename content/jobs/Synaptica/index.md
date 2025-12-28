@@ -1,10 +1,10 @@
 ---
 date: '2023-08-01'
-title: 'Software Engineer'
+title: 'Data Scientist'
 company: 'Synaptica'
 location: 'Remote'
 range: 'August 2023 - December 2025'
-url: '#'
+url: 'https://synaptica.co/'
 category: 'industry'
 ---
 

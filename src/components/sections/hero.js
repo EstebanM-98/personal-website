@@ -141,9 +141,9 @@ const Hero = () => {
   const three = (
     <>
       <p>
-        a physicist who enjoys the intersection of complex problems, computation, and theory. I’m
-        passionate about research in physics and technology, and I love turning ideas into clear
-        models and practical tools that hold up in the real world.
+        I’m passionate about research in physics and technology, and I see research as an
+        opportunity to learn—and to build new tools for tackling specific challenges. I love turning
+        ideas into clear models and practical solutions that hold up in the real world.
       </p>
     </>
   );
