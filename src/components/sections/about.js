@@ -127,17 +127,15 @@ const About = () => {
 
   const skills = [
     'Python',
+    'Comsol',
     'Docker',
     'Pyspark',
     'FastAPI',
     'Django',
-    'Celery',
-    'PostgreSQL',
-    'C/C++',
+    'SQL',
+    'C++',
     'Node.js',
     'Latex',
-    'Haskell',
-    'Dart',
   ];
 
   return (
@@ -148,18 +146,18 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Esteban Marulanda, and I enjoy solving problems using tech tools. My
-              interest in software development started when I, as a physics student, realized that
-              the academic does not train us to make maintenable and scalable solutions, so I began
-              to study in order to gain habilities in those fields.
+              Hi, I’m Esteban Marulanda. I’m a physicist driven by research and technology, with a
+              strong foundation in mathematics, physics, and scientific computing. My work spans
+              nonlinear optics, THz time-domain spectroscopy, condensed matter, and open quantum
+              systems, focused on how structure and correlations in matter lead to emergent
+              phenomena.
             </p>
 
             <p>
-              Fast-forward to today, and I’ve had the opportunity to work with the right people,
-              which has allowed me to solve a wide range of problems related to process automation,
-              data science, signals processing, backend, cellular automatas, games development,
-              among others. My main focus will always be to solve problems using the scientific
-              method and available development techs.
+              In parallel, I have 4+ years of experience building Python and C++ projects in data
+              science and data engineering—from robust data processing and automation to
+              reproducible pipelines and research-grade tooling. I enjoy turning complex questions
+              into clear models and reliable software that works beyond the lab.
             </p>
 
             <p>Here are a few technologies I’ve been working with:</p>
